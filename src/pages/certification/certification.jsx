@@ -11,15 +11,15 @@ const certifications = [
   },
   {
     title: "Information Technology Specialist - Network Security",
-    year: "2024", // Updated to complete year
+    year: "2024",
   },
 ];
 
 const Certification = () => {
   return (
-    <div className="min-h-screen bg-white px-6 py-16 flex flex-col items-center">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 px-6 py-16 flex flex-col items-center">
       <div className="w-full max-w-3xl">
-        <h1 className="text-4xl font-bold text-gray-900 mb-10 text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-12 text-center">
           Certifications
         </h1>
 
@@ -27,14 +27,14 @@ const Certification = () => {
           {certifications.map((cert, index) => (
             <li
               key={index}
-              className="bg-gray-50 border border-gray-200 rounded-xl p-5 shadow-sm"
+              className="bg-white border border-gray-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition duration-200 flex justify-between items-center"
             >
-              <div className="flex justify-between items-center">
-                <p className="text-md text-gray-800 font-semibold">
-                  {cert.title}
-                </p>
-                <span className="text-sm text-gray-600">{cert.year}</span>
+              <div className="text-gray-800 text-base sm:text-lg font-medium">
+                {cert.title}
               </div>
+              <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">
+                {cert.year}
+              </span>
             </li>
           ))}
         </ul>

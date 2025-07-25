@@ -33,25 +33,27 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <div className="min-h-screen bg-gray-50 px-6 py-16 flex flex-col items-center">
+    <div className="min-h-screen bg-gradient-to-br from-white to-blue-50 px-6 py-20 flex flex-col items-center">
       <div className="w-full max-w-4xl">
-        <h1 className="text-4xl font-bold text-gray-900 mb-10 text-center">
+        <h1 className="text-4xl font-bold text-gray-800 mb-14 text-center">
           Experience
         </h1>
 
-        <div className="space-y-8">
+        <div className="space-y-10 relative">
           {experiences.map((exp, idx) => (
             <div
               key={idx}
-              className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+              className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all border-l-4 border-blue-500"
             >
-              <div className="flex justify-between items-start flex-wrap gap-2 mb-2">
+              <div className="flex justify-between items-start flex-wrap gap-2 mb-1">
                 <h2 className="text-xl font-semibold text-gray-800">
                   {exp.role}
                 </h2>
-                <span className="text-sm text-gray-500">{exp.year}</span>
+                <span className="bg-blue-100 text-blue-700 text-xs font-medium px-3 py-1 rounded-full">
+                  {exp.year}
+                </span>
               </div>
-              <h3 className="text-md font-medium text-blue-700 mb-2">
+              <h3 className="text-md font-medium text-blue-600 mb-3">
                 {exp.company}
               </h3>
               <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">

@@ -9,13 +9,15 @@ import AccadHistory from './pages/accademicHistory/accadHistory.jsx';
 import Certification from './pages/certification/certification.jsx';
 import ProLanguage from './pages/laguage/proLaguage.jsx';
 
-createRoot(document.getElementById('root')).render(
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Home />
-    <Contacts />
     <Experience />
     <AccadHistory />
     <Certification />
     <ProLanguage />
-  </StrictMode>,
-)
+    <Contacts />
+    
+  </StrictMode>
+);
